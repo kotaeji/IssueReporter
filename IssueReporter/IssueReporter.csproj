@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net48</TargetFramework>
+    <TargetFramework>net481</TargetFramework>
     <UseWPF>true</UseWPF>
     <RootNamespace>IssueReporter</RootNamespace>
     <AssemblyName>IssueReporter</AssemblyName>

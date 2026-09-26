@@ -1,6 +1,6 @@
 # IssueReporter
 
-Windows desktop issue-reporting application built with **C# / WPF** targeting **.NET Framework 4.8** (`net48`, SDK-style project).
+Windows desktop issue-reporting application built with **C# / WPF** targeting **.NET Framework 4.8.1** (`net481`, SDK-style project).
 
 ## Open on Windows (Visual Studio 2022)
 
@@ -12,7 +12,7 @@ Windows desktop issue-reporting application built with **C# / WPF** targeting **
 ### Requirements
 
 - Visual Studio 2022 with .NET desktop development
-- .NET Framework 4.8 (runtime/targeting pack typically included with the workload)
+- .NET Framework 4.8.1 targeting pack (or 4.8 if 4.8.1 is unavailable/targeting pack typically included with the workload)
 
 ### If the project shows as Unsupported / incompatible
 
