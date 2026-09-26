@@ -83,7 +83,7 @@ namespace IssueReporter
         private void About_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show(
-                "IssueReporter 1.0.0\n\nDesktop issue reporting skeleton.\nOpen and build on Windows with Visual Studio (.NET Framework 4.8.1).",
+                "IssueReporter 1.0.0\n\nDesktop issue reporting skeleton.\nOpen and build on Windows with Visual Studio (.NET Framework 4.8).",
                 "About IssueReporter",
                 MessageBoxButton.OK,
                 MessageBoxImage.Information);

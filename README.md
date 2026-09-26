@@ -1,20 +1,20 @@
 # IssueReporter
 
-Windows desktop issue-reporting application built with **C# / WPF** targeting **.NET Framework 4.8.1**.
+Windows desktop issue-reporting application built with **C# / WPF** targeting **.NET Framework 4.8**.
 
 > Source was authored on macOS. Build and run on **Windows** with Visual Studio or MSBuild.
 
 ## Requirements (Windows)
 
 - Visual Studio 2019 / 2022 (or Build Tools) with the **.NET desktop development** workload
-- .NET Framework **4.8.1** Developer Pack (or 4.8 if your machine only has 4.8 — see Retarget below)
+- .NET Framework **4.8** Developer Pack / targeting pack
 - Windows 10 / 11
 
 ## Open and run
 
 1. Clone or copy this repository onto a Windows machine.
 2. Open `IssueReporter.sln` in Visual Studio.
-3. If prompted about the target framework, install the 4.8.1 targeting pack, or retarget (below).
+3. If prompted about the target framework, install the .NET Framework 4.8 targeting pack.
 4. Press **F5** (Debug) or **Ctrl+F5** (Start without debugging).
 
 ### Command-line build (optional)
