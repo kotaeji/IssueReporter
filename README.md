@@ -12,11 +12,11 @@ Windows desktop issue-reporting application built with **C# / WPF** targeting **
 ### Requirements
 
 - Visual Studio 2022 with .NET desktop development
-- .NET Framework 4.8.1 targeting pack (or 4.8 if 4.8.1 is unavailable/targeting pack typically included with the workload)
+- .NET Framework 4.8.1 targeting pack (fall back to `net48` if 4.8.1 is not installed)
 
 ### If the project shows as Unsupported / incompatible
 
-This repo uses an **SDK-style** `.csproj` (`Microsoft.NET.Sdk` + `UseWPF` + `net48`). Older classic non-SDK WPF projects can fail to load when that project system is missing or mismatched; the SDK-style format matches common VS 2022 setups.
+This repo uses an **SDK-style** `.csproj` (`Microsoft.NET.Sdk` + `UseWPF` + `net481`). Older classic non-SDK WPF projects can fail to load when that project system is missing or mismatched; the SDK-style format matches common VS 2022 setups.
 
 ## Notes
 
