@@ -107,7 +107,9 @@ namespace IssueReporter
             var item = NavList.SelectedItem as ListBoxItem;
             if (item != null)
             {
-                string name = item.Content as string ?? "Unknown";
+                string name = item.Tag as string
+                    ?? (item.Content as string)
+                    ?? "Unknown";
                 SetStatus("Navigated to " + name);
                 // Skeleton: only New Issue form is implemented in the main pane
             }

@@ -8,7 +8,7 @@
         <SolidColorBrush x:Key="WindowBackgroundBrush" Color="#F0F0F0"/>
         <SolidColorBrush x:Key="ToolbarBackgroundBrush" Color="#E8E8E8"/>
         <SolidColorBrush x:Key="NavBackgroundBrush" Color="#E5E5E5"/>
-        <SolidColorBrush x:Key="NavSelectedBrush" Color="#CCE4F7"/>
+        <SolidColorBrush x:Key="NavSelectedBrush" Color="#B3D6F2"/>
         <SolidColorBrush x:Key="NavHoverBrush" Color="#F5F5F5"/>
         <SolidColorBrush x:Key="ContentBackgroundBrush" Color="#FFFFFF"/>
         <SolidColorBrush x:Key="AccentBrush" Color="#0078D4"/>
@@ -21,6 +21,118 @@
         <SolidColorBrush x:Key="StatusConnectedBrush" Color="#107C10"/>
         <SolidColorBrush x:Key="ToolbarButtonHoverBrush" Color="#D8D8D8"/>
         <SolidColorBrush x:Key="ToolbarButtonPressedBrush" Color="#C8C8C8"/>
+        <SolidColorBrush x:Key="IconBrush" Color="#2B2B2B"/>
+        <SolidColorBrush x:Key="IconMutedBrush" Color="#555555"/>
+
+        <!-- ============================================================
+             Path geometries (16×16 viewBox) — no NuGet, no font dependency
+             ============================================================ -->
+        <!-- Document / New -->
+        <Geometry x:Key="GeoDocument">M3,1.5 H9.5 L12.5,4.5 V14.5 H3 Z M9.5,1.5 V4.5 H12.5</Geometry>
+        <!-- Floppy / Save -->
+        <Geometry x:Key="GeoSave">M2,2 H11 L14,5 V14 H2 Z M4,2 V6 H10 V2 M4.5,9 H11.5 V14 H4.5 Z</Geometry>
+        <!-- Send / Submit -->
+        <Geometry x:Key="GeoSend">M1,2.5 L15,8 1,13.5 1,9.2 9.5,8 1,6.8 Z</Geometry>
+        <!-- Paperclip / Attach -->
+        <Geometry x:Key="GeoAttach">M5,1.5 C3.3,1.5 2,2.8 2,4.5 V11 C2,13.5 4,15.5 6.5,15.5 C9,15.5 11,13.5 11,11 V4 H9.5 V11 C9.5,12.7 8.2,14 6.5,14 C4.8,14 3.5,12.7 3.5,11 V4.5 C3.5,3.7 4.2,3 5,3 C5.8,3 6.5,3.7 6.5,4.5 V10 H8 V4.5 C8,2.8 6.7,1.5 5,1.5 Z M8.5,3 V4.5 C8.5,5.9 7.4,7 6,7 V8.5 C8.2,8.5 10,6.7 10,4.5 V3 Z</Geometry>
+        <!-- Refresh arrows -->
+        <Geometry x:Key="GeoRefresh">M13,2.5 L15.5,5.5 13,8.5 V6.8 A5,5 0 1 1 8,3 L8,1.5 A6.5,6.5 0 1 0 14.5,7.5 H13 V2.5 Z</Geometry>
+        <!-- Dashboard tiles -->
+        <Geometry x:Key="GeoDashboard">M1,1 H7 V7 H1 Z M9,1 H15 V7 H9 Z M1,9 H7 V15 H1 Z M9,9 H15 V15 H9 Z</Geometry>
+        <!-- List / My Issues -->
+        <Geometry x:Key="GeoList">M1,2.5 H3.5 V5 H1 Z M5.5,2.5 H15 V5 H5.5 Z M1,7 H3.5 V9.5 H1 Z M5.5,7 H15 V9.5 H5.5 Z M1,11.5 H3.5 V14 H1 Z M5.5,11.5 H15 V14 H5.5 Z</Geometry>
+        <!-- Templates (stacked pages) -->
+        <Geometry x:Key="GeoTemplates">M3,4 H13 V15 H3 Z M5,2 H15 V4 H13 V13 H15 V2 H5 Z</Geometry>
+        <!-- Settings gear (simplified) -->
+        <Geometry x:Key="GeoSettings">M7,1 H9 V3.1 L10.6,3.7 12,2.4 13.4,3.8 12.1,5.4 12.7,7 H15 V9 H12.7 L12.1,10.6 13.4,12.2 12,13.6 10.6,12.3 9,12.9 V15 H7 V12.9 L5.4,12.3 4,13.6 2.6,12.2 3.9,10.6 3.3,9 H1 V7 H3.3 L3.9,5.4 2.6,3.8 4,2.4 5.4,3.7 7,3.1 Z M8,5.8 A2.2,2.2 0 1 0 8,10.2 A2.2,2.2 0 1 0 8,5.8 Z</Geometry>
+        <!-- Plus (for New Issue accent) -->
+        <Geometry x:Key="GeoPlus">M7,2 H9 V7 H14 V9 H9 V14 H7 V9 H2 V7 H7 Z</Geometry>
+        <!-- Exit / door -->
+        <Geometry x:Key="GeoExit">M2,2 H9 V4 H4 V12 H9 V14 H2 Z M8,6.5 H12.5 L11,5 12.2,3.8 15.5,7.1 12.2,10.4 11,9.2 12.5,7.7 H8 Z</Geometry>
+        <!-- About / info -->
+        <Geometry x:Key="GeoInfo">M8,1.5 A6.5,6.5 0 1 0 8,14.5 A6.5,6.5 0 1 0 8,1.5 Z M7.2,6.5 H8.8 V12 H7.2 Z M7.2,3.8 H8.8 V5.2 H7.2 Z</Geometry>
+
+        <!-- DrawingImage wrappers (for Image.Source if needed) -->
+        <DrawingImage x:Key="IconDocument">
+            <DrawingImage.Drawing>
+                <GeometryDrawing Brush="#2B2B2B" Geometry="{StaticResource GeoDocument}"/>
+            </DrawingImage.Drawing>
+        </DrawingImage>
+        <DrawingImage x:Key="IconSave">
+            <DrawingImage.Drawing>
+                <GeometryDrawing Brush="#2B2B2B" Geometry="{StaticResource GeoSave}"/>
+            </DrawingImage.Drawing>
+        </DrawingImage>
+        <DrawingImage x:Key="IconSend">
+            <DrawingImage.Drawing>
+                <GeometryDrawing Brush="#FFFFFF" Geometry="{StaticResource GeoSend}"/>
+            </DrawingImage.Drawing>
+        </DrawingImage>
+        <DrawingImage x:Key="IconAttach">
+            <DrawingImage.Drawing>
+                <GeometryDrawing Brush="#2B2B2B" Geometry="{StaticResource GeoAttach}"/>
+            </DrawingImage.Drawing>
+        </DrawingImage>
+        <DrawingImage x:Key="IconRefresh">
+            <DrawingImage.Drawing>
+                <GeometryDrawing Brush="#2B2B2B" Geometry="{StaticResource GeoRefresh}"/>
+            </DrawingImage.Drawing>
+        </DrawingImage>
+        <DrawingImage x:Key="IconDashboard">
+            <DrawingImage.Drawing>
+                <GeometryDrawing Brush="#2B2B2B" Geometry="{StaticResource GeoDashboard}"/>
+            </DrawingImage.Drawing>
+        </DrawingImage>
+        <DrawingImage x:Key="IconList">
+            <DrawingImage.Drawing>
+                <GeometryDrawing Brush="#2B2B2B" Geometry="{StaticResource GeoList}"/>
+            </DrawingImage.Drawing>
+        </DrawingImage>
+        <DrawingImage x:Key="IconTemplates">
+            <DrawingImage.Drawing>
+                <GeometryDrawing Brush="#2B2B2B" Geometry="{StaticResource GeoTemplates}"/>
+            </DrawingImage.Drawing>
+        </DrawingImage>
+        <DrawingImage x:Key="IconSettings">
+            <DrawingImage.Drawing>
+                <GeometryDrawing Brush="#2B2B2B" Geometry="{StaticResource GeoSettings}"/>
+            </DrawingImage.Drawing>
+        </DrawingImage>
+        <DrawingImage x:Key="IconPlus">
+            <DrawingImage.Drawing>
+                <GeometryDrawing Brush="#2B2B2B" Geometry="{StaticResource GeoPlus}"/>
+            </DrawingImage.Drawing>
+        </DrawingImage>
+
+        <!-- Icon Path styles (preferred in UI for reliable recolor) -->
+        <Style x:Key="ToolbarIcon" TargetType="Path">
+            <Setter Property="Width" Value="16"/>
+            <Setter Property="Height" Value="16"/>
+            <Setter Property="Stretch" Value="Uniform"/>
+            <Setter Property="Fill" Value="{StaticResource IconBrush}"/>
+            <Setter Property="Margin" Value="0,0,6,0"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="SnapsToDevicePixels" Value="True"/>
+        </Style>
+        <Style x:Key="ToolbarIconLight" TargetType="Path" BasedOn="{StaticResource ToolbarIcon}">
+            <Setter Property="Fill" Value="{StaticResource AccentForegroundBrush}"/>
+        </Style>
+        <Style x:Key="NavIcon" TargetType="Path">
+            <Setter Property="Width" Value="16"/>
+            <Setter Property="Height" Value="16"/>
+            <Setter Property="Stretch" Value="Uniform"/>
+            <Setter Property="Fill" Value="{StaticResource IconMutedBrush}"/>
+            <Setter Property="Margin" Value="0,0,8,0"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="SnapsToDevicePixels" Value="True"/>
+        </Style>
+        <Style x:Key="MenuIcon" TargetType="Path">
+            <Setter Property="Width" Value="14"/>
+            <Setter Property="Height" Value="14"/>
+            <Setter Property="Stretch" Value="Uniform"/>
+            <Setter Property="Fill" Value="{StaticResource IconBrush}"/>
+            <Setter Property="SnapsToDevicePixels" Value="True"/>
+        </Style>
 
         <!-- Window: TargetType alone does not restyle chrome; still set client defaults -->
         <Style TargetType="Window">
@@ -37,9 +149,10 @@
             <Setter Property="Foreground" Value="{StaticResource AccentForegroundBrush}"/>
             <Setter Property="BorderBrush" Value="#006CBD"/>
             <Setter Property="BorderThickness" Value="1"/>
-            <Setter Property="Padding" Value="12,4"/>
-            <Setter Property="Margin" Value="4,0,0,0"/>
-            <Setter Property="MinWidth" Value="90"/>
+            <Setter Property="Padding" Value="10,3"/>
+            <Setter Property="Margin" Value="2,0"/>
+            <Setter Property="MinWidth" Value="0"/>
+            <Setter Property="MinHeight" Value="26"/>
             <Setter Property="Cursor" Value="Hand"/>
             <Setter Property="SnapsToDevicePixels" Value="True"/>
             <Setter Property="Template">
@@ -71,15 +184,16 @@
             </Setter>
         </Style>
 
-        <!-- Toolbar button — ToolBar chrome also fights Background without a template -->
+        <!-- Toolbar button — denser icon+text chrome -->
         <Style x:Key="ToolbarButton" TargetType="Button">
             <Setter Property="Background" Value="{StaticResource ToolbarBackgroundBrush}"/>
             <Setter Property="Foreground" Value="#1A1A1A"/>
             <Setter Property="BorderBrush" Value="{StaticResource BorderBrush}"/>
             <Setter Property="BorderThickness" Value="1"/>
-            <Setter Property="Padding" Value="10,4"/>
+            <Setter Property="Padding" Value="8,3"/>
             <Setter Property="Margin" Value="2,0"/>
-            <Setter Property="MinWidth" Value="72"/>
+            <Setter Property="MinWidth" Value="0"/>
+            <Setter Property="MinHeight" Value="26"/>
             <Setter Property="Cursor" Value="Hand"/>
             <Setter Property="SnapsToDevicePixels" Value="True"/>
             <Setter Property="Template">
@@ -118,9 +232,9 @@
             <Setter Property="Padding" Value="8,3"/>
         </Style>
 
-        <!-- Nav ListBoxItem: selected #CCE4F7 + left accent bar -->
+        <!-- Nav ListBoxItem: stronger selected + thicker left accent bar -->
         <Style TargetType="ListBoxItem">
-            <Setter Property="Padding" Value="8,6"/>
+            <Setter Property="Padding" Value="8,7"/>
             <Setter Property="Margin" Value="0,1"/>
             <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
             <Setter Property="Foreground" Value="#1A1A1A"/>
@@ -136,7 +250,7 @@
                                 SnapsToDevicePixels="True">
                             <Grid>
                                 <Border x:Name="AccentBar"
-                                        Width="3"
+                                        Width="4"
                                         HorizontalAlignment="Left"
                                         Background="Transparent"/>
                                 <ContentPresenter Margin="{TemplateBinding Padding}"
@@ -152,6 +266,7 @@
                             <Trigger Property="IsSelected" Value="True">
                                 <Setter TargetName="Bd" Property="Background" Value="{StaticResource NavSelectedBrush}"/>
                                 <Setter TargetName="AccentBar" Property="Background" Value="{StaticResource AccentBrush}"/>
+                                <Setter Property="FontWeight" Value="SemiBold"/>
                             </Trigger>
                             <MultiTrigger>
                                 <MultiTrigger.Conditions>
@@ -170,7 +285,7 @@
             </Setter>
         </Style>
 
-        <!-- Compact desktop GroupBox (not web-card chrome) -->
+        <!-- Compact desktop GroupBox (white content on #F0F0F0) -->
         <Style TargetType="GroupBox">
             <Setter Property="Background" Value="{StaticResource ContentBackgroundBrush}"/>
             <Setter Property="BorderBrush" Value="{StaticResource BorderBrush}"/>
@@ -244,7 +359,7 @@
         <Style TargetType="ToolBar">
             <Setter Property="Background" Value="{StaticResource ToolbarBackgroundBrush}"/>
             <Setter Property="BorderThickness" Value="0"/>
-            <Setter Property="Padding" Value="2"/>
+            <Setter Property="Padding" Value="4,3"/>
         </Style>
 
         <Style TargetType="ToolBarTray">
@@ -256,7 +371,8 @@
             <Setter Property="Foreground" Value="#1A1A1A"/>
             <Setter Property="BorderBrush" Value="{StaticResource BorderBrush}"/>
             <Setter Property="BorderThickness" Value="0,1,0,0"/>
-            <Setter Property="Padding" Value="4,0"/>
+            <Setter Property="Padding" Value="6,0"/>
+            <Setter Property="FontSize" Value="11"/>
         </Style>
 
         <Style TargetType="Separator">
